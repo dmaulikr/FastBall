@@ -7,6 +7,6 @@ public class SceneScript : MonoBehaviour
 
 	void Start()
     {
-        SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("GUI", LoadSceneMode.Additive);
 	}
 }
