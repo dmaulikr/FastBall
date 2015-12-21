@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneScript : MonoBehaviour
 {
@@ -6,6 +7,6 @@ public class SceneScript : MonoBehaviour
 
 	void Start()
     {
-        Application.LoadLevelAdditive("GUIScene");
+        SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
 	}
 }

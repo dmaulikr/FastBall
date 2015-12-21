@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class RetryMenu : MonoBehaviour
@@ -22,6 +23,6 @@ public class RetryMenu : MonoBehaviour
 
     public void MenuClick()
     {
-        Application.LoadLevel("MenuScene");
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }

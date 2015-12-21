@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
@@ -39,7 +40,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void BackClick()
     {
-        Application.LoadLevel(PrevLevel);
+        SceneManager.LoadScene(PrevLevel, LoadSceneMode.Single);
     }
 
     public void Update()

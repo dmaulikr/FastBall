@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -47,8 +48,8 @@ public class MainMenu : MonoBehaviour
 
     public void MenuClick()
     {
-        SettingsMenu.PrevLevel = "MenuScene";
-        Application.LoadLevel("SettingsMenu");
+        SettingsMenu.PrevLevel = "MainMenu";
+        SceneManager.LoadScene("SettingsMenu", LoadSceneMode.Single);
     }
 
     public void ExitClick()

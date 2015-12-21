@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CompletedMenu : MonoBehaviour
@@ -38,15 +39,18 @@ public class CompletedMenu : MonoBehaviour
         else
         {
             if (LastLevel)
-                Application.LoadLevel("MenuScene");
+            {
+                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            }
             else
             {
                 Game.LoadLevel();
             }
         }
     }
+
     public void MenuClick()
     {
-        Application.LoadLevel("MenuScene");
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameMenu : MonoBehaviour
@@ -45,15 +46,15 @@ public class GameMenu : MonoBehaviour
 
         if (Time.timeSinceLevelLoad >= timeLimit)
         {
-            RetryMenu.PrevLevel = Application.loadedLevelName;
+            RetryMenu.PrevLevel = SceneManager.GetActiveScene().name;
             RetryMenu.Message = "Too slow";
-            Application.LoadLevel("RetryScreen");
+            SceneManager.LoadScene("RetryScreen", LoadSceneMode.Single);
         }
     }
 	
 	public void MenuClick()
     {
-        Application.LoadLevel("MenuScene");
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
 	}
 
     public void RetryClick()
